@@ -4,7 +4,9 @@ A fast, memory‑efficient Python utility to attempt user‑password decryption 
 Use only on files owned or explicitly authorized for testing.
 
 fastest result come from 4 digit passwords, so keep that in mind
-Features
+
+
+# Features
 Wordlist mode and generator (brute‑force) mode
 
 Multithreaded, early stop on success
@@ -13,12 +15,12 @@ Streams candidates (no massive preloading)
 
 Optional accurate progress totals
 
-Requirements
+# Requirements
 Python 3.8+
 
 pip install pikepdf tqdm
 
-Quick Start
+# Quick Start
 Wordlist:
 
 python -u ".\cracker.py" ".\secret.pdf" --wordlist ".\rockyou.txt" --max_workers 8
@@ -33,7 +35,7 @@ python3 -u "./cracker.py" "./secret.pdf" --wordlist "./rockyou.txt" --max_worker
 
 python3 -u "./cracker.py" "./secret.pdf" --g --min 1 --max 4 --c 1234567890 --max_workers 8
 
-CLI Options
+# CLI Options
 pdf_file: Path to the protected PDF
 
 --wordlist PATH: Use a wordlist file (one password per line)
@@ -50,7 +52,7 @@ pdf_file: Path to the protected PDF
 
 --count: Show total progress (slower; optional)
 
-Examples
+# Examples
 Generator, digits 1–4 chars:
 
 python -u ".\cracker.py" ".\ex3.pdf" --g --min 1 --max 4 --c 1234567890
@@ -71,7 +73,7 @@ Generator, mixed set, more threads:
 
 python -u ".\cracker.py" ".\ex3.pdf" --g --min 2 --max 6 --c abcdef0123 --max_workers 12
 
-Tips
+# Tips
 Validate quickly with a tiny search space:
 
 python -u ".\cracker.py" ".\ex3.pdf" --g --min 1 --max 2 --c 01
