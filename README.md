@@ -3,6 +3,7 @@ A fast, memory‑efficient Python utility to attempt user‑password decryption 
 
 Use only on files owned or explicitly authorized for testing.
 
+fastest result come from 4 digit passwords, so keep that in mind
 Features
 Wordlist mode and generator (brute‑force) mode
 
